@@ -26,6 +26,8 @@
 		3085FA5328DE342100117FF7 /* PersonalProgressCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085FA5228DE342100117FF7 /* PersonalProgressCard.swift */; };
 		3085FA5528DF056D00117FF7 /* DayInfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085FA5428DF056D00117FF7 /* DayInfoCard.swift */; };
 		3085FA5928DF05DD00117FF7 /* CardProgressStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085FA5828DF05DD00117FF7 /* CardProgressStyle.swift */; };
+		30CE638728F5DDB1000E973F /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CE638628F5DDB1000E973F /* Fonts.swift */; };
+		30CE638928F5E08B000E973F /* ErrorCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CE638828F5E08B000E973F /* ErrorCard.swift */; };
 		30FD7A85288C8E3600FAB631 /* etenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD7A84288C8E3600FAB631 /* etenApp.swift */; };
 		30FD7A87288C8E3600FAB631 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD7A86288C8E3600FAB631 /* ContentView.swift */; };
 		30FD7A89288C8E3A00FAB631 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30FD7A88288C8E3A00FAB631 /* Assets.xcassets */; };
@@ -51,6 +53,8 @@
 		3085FA5228DE342100117FF7 /* PersonalProgressCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalProgressCard.swift; sourceTree = "<group>"; };
 		3085FA5428DF056D00117FF7 /* DayInfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayInfoCard.swift; sourceTree = "<group>"; };
 		3085FA5828DF05DD00117FF7 /* CardProgressStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardProgressStyle.swift; sourceTree = "<group>"; };
+		30CE638628F5DDB1000E973F /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		30CE638828F5E08B000E973F /* ErrorCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCard.swift; sourceTree = "<group>"; };
 		30FD7A81288C8E3600FAB631 /* eten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eten.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30FD7A84288C8E3600FAB631 /* etenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = etenApp.swift; sourceTree = "<group>"; };
 		30FD7A86288C8E3600FAB631 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 				301AF60A28E74E1C00AED113 /* FontsExtension.swift */,
 				30765ACA28EB43BC00C603FD /* CaloriesCard.swift */,
 				30765AD528EB606200C603FD /* StepsCard.swift */,
+				30CE638628F5DDB1000E973F /* Fonts.swift */,
+				30CE638828F5E08B000E973F /* ErrorCard.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -258,8 +264,10 @@
 				30765AD428EB4BD300C603FD /* CaloriesModel.swift in Sources */,
 				30765AC828EB3A4500C603FD /* HealthConnect.swift in Sources */,
 				3080688828ECA9AA00D7FC37 /* AuthPage.swift in Sources */,
+				30CE638928F5E08B000E973F /* ErrorCard.swift in Sources */,
 				30765AD828EB60E600C603FD /* StepsData.swift in Sources */,
 				30FD7A85288C8E3600FAB631 /* etenApp.swift in Sources */,
+				30CE638728F5DDB1000E973F /* Fonts.swift in Sources */,
 				30765AD628EB606200C603FD /* StepsCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
