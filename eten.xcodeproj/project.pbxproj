@@ -1,0 +1,511 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		301AF60B28E74E1C00AED113 /* FontsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301AF60A28E74E1C00AED113 /* FontsExtension.swift */; };
+		30765AC828EB3A4500C603FD /* HealthConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30765AC728EB3A4500C603FD /* HealthConnect.swift */; };
+		30765ACB28EB43BC00C603FD /* CaloriesCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30765ACA28EB43BC00C603FD /* CaloriesCard.swift */; };
+		30765ACE28EB458000C603FD /* MainPageVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30765ACD28EB458000C603FD /* MainPageVM.swift */; };
+		30765AD128EB460200C603FD /* CaloriesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30765AD028EB460200C603FD /* CaloriesData.swift */; };
+		30765AD428EB4BD300C603FD /* CaloriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30765AD328EB4BD300C603FD /* CaloriesModel.swift */; };
+		30765AD628EB606200C603FD /* StepsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30765AD528EB606200C603FD /* StepsCard.swift */; };
+		30765AD828EB60E600C603FD /* StepsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30765AD728EB60E600C603FD /* StepsData.swift */; };
+		30765ADB28EB69B200C603FD /* StepsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30765ADA28EB69B200C603FD /* StepsModel.swift */; };
+		3080688228EC8ADE00D7FC37 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3080688128EC8ADD00D7FC37 /* GoogleService-Info.plist */; };
+		3080688628EC94E800D7FC37 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3080688528EC94E800D7FC37 /* ViewRouter.swift */; };
+		3080688828ECA9AA00D7FC37 /* AuthPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3080688728ECA9AA00D7FC37 /* AuthPage.swift */; };
+		3080688B28ECC08C00D7FC37 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3080688A28ECC08C00D7FC37 /* FirebaseAnalyticsSwift */; };
+		3080688D28ECC08C00D7FC37 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3080688C28ECC08C00D7FC37 /* FirebaseAuth */; };
+		3080688F28ECC08C00D7FC37 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3080688E28ECC08C00D7FC37 /* FirebaseDatabaseSwift */; };
+		3085FA4E28DE229500117FF7 /* MainWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085FA4D28DE229500117FF7 /* MainWindow.swift */; };
+		3085FA5328DE342100117FF7 /* PersonalProgressCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085FA5228DE342100117FF7 /* PersonalProgressCard.swift */; };
+		3085FA5528DF056D00117FF7 /* DayInfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085FA5428DF056D00117FF7 /* DayInfoCard.swift */; };
+		3085FA5928DF05DD00117FF7 /* CardProgressStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085FA5828DF05DD00117FF7 /* CardProgressStyle.swift */; };
+		30FD7A85288C8E3600FAB631 /* etenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD7A84288C8E3600FAB631 /* etenApp.swift */; };
+		30FD7A87288C8E3600FAB631 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD7A86288C8E3600FAB631 /* ContentView.swift */; };
+		30FD7A89288C8E3A00FAB631 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30FD7A88288C8E3A00FAB631 /* Assets.xcassets */; };
+		30FD7A8C288C8E3A00FAB631 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30FD7A8B288C8E3A00FAB631 /* Preview Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		301AF60A28E74E1C00AED113 /* FontsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsExtension.swift; sourceTree = "<group>"; };
+		30765AC728EB3A4500C603FD /* HealthConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthConnect.swift; sourceTree = "<group>"; };
+		30765AC928EB3B3900C603FD /* eten.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = eten.entitlements; sourceTree = "<group>"; };
+		30765ACA28EB43BC00C603FD /* CaloriesCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloriesCard.swift; sourceTree = "<group>"; };
+		30765ACD28EB458000C603FD /* MainPageVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageVM.swift; sourceTree = "<group>"; };
+		30765AD028EB460200C603FD /* CaloriesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloriesData.swift; sourceTree = "<group>"; };
+		30765AD328EB4BD300C603FD /* CaloriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloriesModel.swift; sourceTree = "<group>"; };
+		30765AD528EB606200C603FD /* StepsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsCard.swift; sourceTree = "<group>"; };
+		30765AD728EB60E600C603FD /* StepsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsData.swift; sourceTree = "<group>"; };
+		30765AD928EB65F300C603FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		30765ADA28EB69B200C603FD /* StepsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsModel.swift; sourceTree = "<group>"; };
+		3080688128EC8ADD00D7FC37 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3080688528EC94E800D7FC37 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		3080688728ECA9AA00D7FC37 /* AuthPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPage.swift; sourceTree = "<group>"; };
+		3085FA4D28DE229500117FF7 /* MainWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindow.swift; sourceTree = "<group>"; };
+		3085FA5228DE342100117FF7 /* PersonalProgressCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalProgressCard.swift; sourceTree = "<group>"; };
+		3085FA5428DF056D00117FF7 /* DayInfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayInfoCard.swift; sourceTree = "<group>"; };
+		3085FA5828DF05DD00117FF7 /* CardProgressStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardProgressStyle.swift; sourceTree = "<group>"; };
+		30FD7A81288C8E3600FAB631 /* eten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eten.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		30FD7A84288C8E3600FAB631 /* etenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = etenApp.swift; sourceTree = "<group>"; };
+		30FD7A86288C8E3600FAB631 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		30FD7A88288C8E3A00FAB631 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		30FD7A8B288C8E3A00FAB631 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		30FD7A7E288C8E3600FAB631 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3080688F28ECC08C00D7FC37 /* FirebaseDatabaseSwift in Frameworks */,
+				3080688B28ECC08C00D7FC37 /* FirebaseAnalyticsSwift in Frameworks */,
+				3080688D28ECC08C00D7FC37 /* FirebaseAuth in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		30765ACC28EB455F00C603FD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				30765ACD28EB458000C603FD /* MainPageVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		30765ACF28EB45EA00C603FD /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				30765AD028EB460200C603FD /* CaloriesData.swift */,
+				30765AD728EB60E600C603FD /* StepsData.swift */,
+			);
+			path = DataModels;
+			sourceTree = "<group>";
+		};
+		30765AD228EB4BBF00C603FD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				30765AD328EB4BD300C603FD /* CaloriesModel.swift */,
+				30765ADA28EB69B200C603FD /* StepsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3080688328EC94C400D7FC37 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3080688528EC94E800D7FC37 /* ViewRouter.swift */,
+				3085FA4D28DE229500117FF7 /* MainWindow.swift */,
+				3080688728ECA9AA00D7FC37 /* AuthPage.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3085FA4F28DE30D100117FF7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				30765ACC28EB455F00C603FD /* ViewModels */,
+				3085FA5428DF056D00117FF7 /* DayInfoCard.swift */,
+				3085FA5228DE342100117FF7 /* PersonalProgressCard.swift */,
+				3085FA5828DF05DD00117FF7 /* CardProgressStyle.swift */,
+				301AF60A28E74E1C00AED113 /* FontsExtension.swift */,
+				30765ACA28EB43BC00C603FD /* CaloriesCard.swift */,
+				30765AD528EB606200C603FD /* StepsCard.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		30FD7A78288C8E3600FAB631 = {
+			isa = PBXGroup;
+			children = (
+				30FD7A83288C8E3600FAB631 /* eten */,
+				30FD7A82288C8E3600FAB631 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		30FD7A82288C8E3600FAB631 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				30FD7A81288C8E3600FAB631 /* eten.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		30FD7A83288C8E3600FAB631 /* eten */ = {
+			isa = PBXGroup;
+			children = (
+				3080688328EC94C400D7FC37 /* View */,
+				30765AD928EB65F300C603FD /* Info.plist */,
+				3080688128EC8ADD00D7FC37 /* GoogleService-Info.plist */,
+				30765AD228EB4BBF00C603FD /* Models */,
+				30765ACF28EB45EA00C603FD /* DataModels */,
+				30765AC928EB3B3900C603FD /* eten.entitlements */,
+				3085FA4F28DE30D100117FF7 /* UI */,
+				30FD7A84288C8E3600FAB631 /* etenApp.swift */,
+				30FD7A86288C8E3600FAB631 /* ContentView.swift */,
+				30FD7A88288C8E3A00FAB631 /* Assets.xcassets */,
+				30FD7A8A288C8E3A00FAB631 /* Preview Content */,
+				30765AC728EB3A4500C603FD /* HealthConnect.swift */,
+			);
+			path = eten;
+			sourceTree = "<group>";
+		};
+		30FD7A8A288C8E3A00FAB631 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				30FD7A8B288C8E3A00FAB631 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		30FD7A80288C8E3600FAB631 /* eten */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30FD7A8F288C8E3A00FAB631 /* Build configuration list for PBXNativeTarget "eten" */;
+			buildPhases = (
+				30FD7A7D288C8E3600FAB631 /* Sources */,
+				30FD7A7E288C8E3600FAB631 /* Frameworks */,
+				30FD7A7F288C8E3600FAB631 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = eten;
+			packageProductDependencies = (
+				3080688A28ECC08C00D7FC37 /* FirebaseAnalyticsSwift */,
+				3080688C28ECC08C00D7FC37 /* FirebaseAuth */,
+				3080688E28ECC08C00D7FC37 /* FirebaseDatabaseSwift */,
+			);
+			productName = eten;
+			productReference = 30FD7A81288C8E3600FAB631 /* eten.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		30FD7A79288C8E3600FAB631 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					30FD7A80288C8E3600FAB631 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 30FD7A7C288C8E3600FAB631 /* Build configuration list for PBXProject "eten" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 30FD7A78288C8E3600FAB631;
+			packageReferences = (
+				3080688928ECC08B00D7FC37 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = 30FD7A82288C8E3600FAB631 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				30FD7A80288C8E3600FAB631 /* eten */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		30FD7A7F288C8E3600FAB631 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30FD7A8C288C8E3A00FAB631 /* Preview Assets.xcassets in Resources */,
+				30FD7A89288C8E3A00FAB631 /* Assets.xcassets in Resources */,
+				3080688228EC8ADE00D7FC37 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		30FD7A7D288C8E3600FAB631 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30FD7A87288C8E3600FAB631 /* ContentView.swift in Sources */,
+				3085FA4E28DE229500117FF7 /* MainWindow.swift in Sources */,
+				30765ACE28EB458000C603FD /* MainPageVM.swift in Sources */,
+				30765ADB28EB69B200C603FD /* StepsModel.swift in Sources */,
+				3085FA5328DE342100117FF7 /* PersonalProgressCard.swift in Sources */,
+				3085FA5528DF056D00117FF7 /* DayInfoCard.swift in Sources */,
+				301AF60B28E74E1C00AED113 /* FontsExtension.swift in Sources */,
+				3080688628EC94E800D7FC37 /* ViewRouter.swift in Sources */,
+				3085FA5928DF05DD00117FF7 /* CardProgressStyle.swift in Sources */,
+				30765ACB28EB43BC00C603FD /* CaloriesCard.swift in Sources */,
+				30765AD128EB460200C603FD /* CaloriesData.swift in Sources */,
+				30765AD428EB4BD300C603FD /* CaloriesModel.swift in Sources */,
+				30765AC828EB3A4500C603FD /* HealthConnect.swift in Sources */,
+				3080688828ECA9AA00D7FC37 /* AuthPage.swift in Sources */,
+				30765AD828EB60E600C603FD /* StepsData.swift in Sources */,
+				30FD7A85288C8E3600FAB631 /* etenApp.swift in Sources */,
+				30765AD628EB606200C603FD /* StepsCard.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		30FD7A8D288C8E3A00FAB631 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		30FD7A8E288C8E3A00FAB631 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		30FD7A90288C8E3A00FAB631 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = eten/eten.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"eten/Preview Content\"";
+				DEVELOPMENT_TEAM = BX3ASU46J7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = eten/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Eten Foods";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Your health recods will be used for steps and weight display";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Your health recods will be used for steps and weight display";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = YYYeyfasdasdadasdadasdasda;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1b;
+				PRODUCT_BUNDLE_IDENTIFIER = rzheglov.etenfoods;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		30FD7A91288C8E3A00FAB631 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = eten/eten.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"eten/Preview Content\"";
+				DEVELOPMENT_TEAM = BX3ASU46J7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = eten/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Eten Foods";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Your health recods will be used for steps and weight display";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Your health recods will be used for steps and weight display";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = YYYeyfasdasdadasdadasdasda;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1b;
+				PRODUCT_BUNDLE_IDENTIFIER = rzheglov.etenfoods;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		30FD7A7C288C8E3600FAB631 /* Build configuration list for PBXProject "eten" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30FD7A8D288C8E3A00FAB631 /* Debug */,
+				30FD7A8E288C8E3A00FAB631 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30FD7A8F288C8E3A00FAB631 /* Build configuration list for PBXNativeTarget "eten" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30FD7A90288C8E3A00FAB631 /* Debug */,
+				30FD7A91288C8E3A00FAB631 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3080688928ECC08B00D7FC37 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3080688A28ECC08C00D7FC37 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3080688928ECC08B00D7FC37 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		3080688C28ECC08C00D7FC37 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3080688928ECC08B00D7FC37 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		3080688E28ECC08C00D7FC37 /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3080688928ECC08B00D7FC37 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 30FD7A79288C8E3600FAB631 /* Project object */;
+}
