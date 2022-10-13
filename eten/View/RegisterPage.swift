@@ -12,6 +12,7 @@ import Firebase
 struct RegisterPage: View {
     @State private var email = ""
     @State private var password = ""
+    @State private var passwordRepeat = ""
     @State private var loading = false
     @ObservedObject var mainRouter: PagesRouter = PagesRouter()
     @State private var skip = true
@@ -21,7 +22,7 @@ struct RegisterPage: View {
     let animation: Animation = .easeOut(duration: 0.2)
     
     private enum SelectedField {
-        case username, password
+        case email,password, passwordRepeat
     }
     
     @FocusState private var focus: SelectedField?
@@ -40,11 +41,11 @@ struct RegisterPage: View {
                     }
                 }
                 VStack {
-                    Spacer().frame(height: skip && lastErrorTitle == nil ? 72 : 48)
+                    Spacer().frame(height: skip && lastErrorTitle == nil ? 56 : 32)
                     VStack {
-//                        Image("AuthIcon")
-//                            .resizable(resizingMode: .stretch)
-//                            .frame(width: 81.0, height: 60.0)
+                        Image("AuthIcon")
+                            .resizable(resizingMode: .stretch)
+                            .frame(width: 81.0, height: 60.0)
                         Spacer().frame(height: 24)
                         Text("Join to Eten Familly")
                             .font(.system(.title, design: .rounded))
@@ -72,7 +73,7 @@ struct RegisterPage: View {
                         .frame(height: skip && lastErrorTitle == nil ? 56 : 24)
                     VStack {
                         VStack{
-                            TextField("Email or username", text: $email)
+                            TextField("Email", text: $email)
                                 .frame(height: 44)
                                 .keyboardType(.emailAddress)
                                 .autocorrectionDisabled(true)
@@ -81,7 +82,7 @@ struct RegisterPage: View {
                                 .background() {
                                     Divider().offset(x: 0,y: 22)
                                 }
-                                .focused($focus, equals: .username)
+                                .focused($focus, equals: .email)
                                 .onTapGesture {
                                     withAnimation(animation) {
                                         skip = false
@@ -96,11 +97,12 @@ struct RegisterPage: View {
                                 .frame(height: 8)
                             SecureField("Password", text: $password)
                                 .frame(height: 44)
-                                .textContentType(.password)
+                                .textContentType(.newPassword)
                                 .background() {
                                     Divider().offset(x: 0,y: 22)
                                 }.focused($focus, equals: .password)
                                 .onTapGesture {
+                                    focus = .passwordRepeat
                                     withAnimation(animation) {
                                         skip = false
                                         lastErrorTitle = nil
@@ -113,19 +115,31 @@ struct RegisterPage: View {
                                         skip = true
                                     }
                                 }
-                            
-                        }
-                        HStack {
-                            Spacer()
-                            Button(action: {},label: { Text("Forgot password?")})
-                                .foregroundColor(.init(white: 0.58))
-                                .font(.caption.weight(.regular))
+                            SecureField("Repeat password", text: $passwordRepeat)
+                                .frame(height: 44)
+                                .textContentType(.password)
+                                .background() {
+                                    Divider().offset(x: 0,y: 22)
+                                }.focused($focus, equals: .password)
+                                .onTapGesture {
+                                    withAnimation(animation) {
+                                        skip = false
+                                        lastErrorTitle = nil
+                                        lastErrorInfo = ""
+                                    }
+                                }
+                                .onSubmit {
+                                    focus = .passwordRepeat
+                                    withAnimation(animation) {
+                                        skip = true
+                                    }
+                                }
                         }
                         Spacer(minLength: lastErrorTitle == nil ? 88 : 40)
                         VStack {
                             Button(action: {
                                 loading = true
-                                login(email: email, password: password)
+                                register(email: email, password: password)
                             }) {
                                 if loading {
                                     ProgressView().progressViewStyle(.circular).frame(width: 310, height: 40)
@@ -143,42 +157,53 @@ struct RegisterPage: View {
                             }) {
                                 Text("Create account").frame(width: 310, height: 40)
                             }.frame(width: 310, height: 48)
-                            .foregroundColor(.blue)
-                            .font(Font.body)
-                            .disabled(loading)
-                    }
-                    Spacer().frame(height: 16)
-                }.frame(width: 327)
+                                .foregroundColor(.blue)
+                                .font(Font.body)
+                                .disabled(loading)
+                        }
+                        Spacer().frame(height: 16)
+                    }.frame(width: 327)
+                }
             }
-        }
-    }.ignoresSafeArea(.keyboard)
-}
-
-func login(email: String, password: String) {
-    Auth.auth().signIn(withEmail: email, password: password) { comp, err in
-        if let error = err {
-            withAnimation {
-                lastErrorTitle = "Login Error"
-                lastErrorInfo = error.localizedDescription
+        }.ignoresSafeArea(.keyboard)
+    }
+    
+    func register(email: String, password: String) {
+        if (password != passwordRepeat) {
+            withAnimation{
+                lastErrorTitle = "Registration Error"
+                lastErrorInfo = "Passwords didn't match"
                 loading = false
             }
             UINotificationFeedbackGenerator().notificationOccurred(.error)
             return
         }
-        loading = false
-        UINotificationFeedbackGenerator().notificationOccurred(.success)
-        mainRouter.viewRouterPage = .main
-        print("Login as \(email) \(password)")
+        Auth.auth().createUser(withEmail: email, password: password) { (result: AuthDataResult?, err: Error?) in
+            if let error = err {
+                withAnimation{
+                    lastErrorTitle = "Registration Error"
+                    lastErrorInfo = error.localizedDescription
+                    print(lastErrorTitle)
+                    loading = false
+                
+                }
+                UINotificationFeedbackGenerator().notificationOccurred(.error)
+                return
+            }
+            
+            // Account setup
+            
+            mainRouter.viewRouterPage = .main
+        }
+        
     }
-}
-
-}
-
-struct RegisterPage_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            AuthPage(pagesRouter: PagesRouter())
-                .previewDevice("iPhone 8")
+    
+    struct RegisterPage_Previews: PreviewProvider {
+        static var previews: some View {
+            Group {
+                AuthPage(pagesRouter: PagesRouter())
+                    .previewDevice("iPhone 8")
+            }
         }
     }
 }

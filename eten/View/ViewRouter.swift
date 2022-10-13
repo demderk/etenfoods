@@ -17,17 +17,24 @@ enum ViewRouterPage: Hashable {
 
 class PagesRouter: ObservableObject {
     @Published var viewRouterPage: ViewRouterPage? = .register
+    @Published var lastErrorTitle: String? = nil
+    @Published var lastErrorInfo: String = ""
     
     init() {
+        
         viewRouterPage = Auth.auth().currentUser == nil ? .login : .main
+        
     }
-
+    
 }
 
 struct RouterView : View {
     @ObservedObject private var atPage: PagesRouter = PagesRouter()
     
+    private var userChangedHandle: AuthStateDidChangeListenerHandle? = nil
+    
     init() {
+        
     }
     
     var body: some View {
@@ -48,7 +55,6 @@ struct RouterView : View {
                 Text("Whooops!")
                 Text("Something went wrong.")
             }
-            
         }
     }
 }
