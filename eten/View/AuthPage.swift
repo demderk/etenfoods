@@ -10,8 +10,8 @@ import SwiftUI
 import Firebase
 
 struct AuthPage: View {
-    @State private var email = ""
-    @State private var password = ""
+    @State private var email = "b@ya.ru"
+    @State private var password = "qwerty"
     @State private var loading = false
     @ObservedObject var mainRouter: PagesRouter = PagesRouter()
     @State private var skip = true
@@ -22,7 +22,7 @@ struct AuthPage: View {
     let animation: Animation = .easeOut(duration: 0.2)
     
     private enum SelectedField {
-        case username, password
+        case email, password
     }
     
     @FocusState private var focus: SelectedField?
@@ -73,7 +73,7 @@ struct AuthPage: View {
                         .frame(height: skip && lastErrorTitle == nil ? 56 : 24)
                     VStack {
                         VStack{
-                            TextField("Email or username", text: $email)
+                            TextField("Email", text: $email)
                                 .frame(height: 44)
                                 .keyboardType(.emailAddress)
                                 .autocorrectionDisabled(true)
@@ -82,7 +82,7 @@ struct AuthPage: View {
                                 .background() {
                                     Divider().offset(x: 0,y: 22)
                                 }
-                                .focused($focus, equals: .username)
+                                .focused($focus, equals: .email)
                                 .onTapGesture {
                                     withAnimation(animation) {
                                         skip = false
@@ -170,6 +170,7 @@ struct AuthPage: View {
             UINotificationFeedbackGenerator().notificationOccurred(.success)
             //            withAnimation{
             mainRouter.viewRouterPage = .main
+            
             //            }
             print("Login as \(email) \(password)")
         }
