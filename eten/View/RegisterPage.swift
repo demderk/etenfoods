@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 import Firebase
 
-struct AuthPage: View {
+struct RegisterPage: View {
     @State private var email = ""
     @State private var password = ""
     @State private var loading = false
@@ -17,7 +17,6 @@ struct AuthPage: View {
     @State private var skip = true
     @State private var lastErrorTitle : String? = nil
     @State private var lastErrorInfo = "!ERRORMSG"
-    
     
     let animation: Animation = .easeOut(duration: 0.2)
     
@@ -43,11 +42,11 @@ struct AuthPage: View {
                 VStack {
                     Spacer().frame(height: skip && lastErrorTitle == nil ? 72 : 48)
                     VStack {
-                        Image("AuthIcon")
-                            .resizable(resizingMode: .stretch)
-                            .frame(width: 81.0, height: 60.0)
+//                        Image("AuthIcon")
+//                            .resizable(resizingMode: .stretch)
+//                            .frame(width: 81.0, height: 60.0)
                         Spacer().frame(height: 24)
-                        Text("Connect to Eten Familly")
+                        Text("Join to Eten Familly")
                             .font(.system(.title, design: .rounded))
                             .fontWeight(.bold)
                             .multilineTextAlignment(.center)
@@ -131,7 +130,7 @@ struct AuthPage: View {
                                 if loading {
                                     ProgressView().progressViewStyle(.circular).frame(width: 310, height: 40)
                                 } else {
-                                    Text("Continue").progressViewStyle(.circular).frame(width: 310, height: 40)
+                                    Text("Continue").frame(width: 310, height: 40)
                                 }
                             }.buttonStyle(.borderedProminent)
                                 .keyboardShortcut(.defaultAction)
@@ -139,45 +138,43 @@ struct AuthPage: View {
                             Spacer().frame(height: 8)
                             Button(action: {
                                 withAnimation{
-                                    mainRouter.viewRouterPage = .register
+                                    mainRouter.viewRouterPage = .login
                                 }
                             }) {
                                 Text("Create account").frame(width: 310, height: 40)
                             }.frame(width: 310, height: 48)
-                                .foregroundColor(.blue)
-                                .font(Font.body)
-                                .disabled(loading)
-                        }
-                        Spacer().frame(height: 16)
-                    }.frame(width: 327)
-                }
+                            .foregroundColor(.blue)
+                            .font(Font.body)
+                            .disabled(loading)
+                    }
+                    Spacer().frame(height: 16)
+                }.frame(width: 327)
             }
-        }.ignoresSafeArea(.keyboard)
-    }
-    
-    func login(email: String, password: String) {
-        Auth.auth().signIn(withEmail: email, password: password) { comp, err in
-            if let error = err {
-                withAnimation {
-                    lastErrorTitle = "Login Error"
-                    lastErrorInfo = error.localizedDescription
-                    loading = false
-                }
-                UINotificationFeedbackGenerator().notificationOccurred(.error)
-                return
-            }
-            loading = false
-            UINotificationFeedbackGenerator().notificationOccurred(.success)
-            //            withAnimation{
-            mainRouter.viewRouterPage = .main
-            //            }
-            print("Login as \(email) \(password)")
         }
-    }
-    
+    }.ignoresSafeArea(.keyboard)
 }
 
-struct AuthPage_Previews: PreviewProvider {
+func login(email: String, password: String) {
+    Auth.auth().signIn(withEmail: email, password: password) { comp, err in
+        if let error = err {
+            withAnimation {
+                lastErrorTitle = "Login Error"
+                lastErrorInfo = error.localizedDescription
+                loading = false
+            }
+            UINotificationFeedbackGenerator().notificationOccurred(.error)
+            return
+        }
+        loading = false
+        UINotificationFeedbackGenerator().notificationOccurred(.success)
+        mainRouter.viewRouterPage = .main
+        print("Login as \(email) \(password)")
+    }
+}
+
+}
+
+struct RegisterPage_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             AuthPage(pagesRouter: PagesRouter())

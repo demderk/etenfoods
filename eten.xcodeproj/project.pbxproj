@@ -16,6 +16,7 @@
 		30765AD628EB606200C603FD /* StepsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30765AD528EB606200C603FD /* StepsCard.swift */; };
 		30765AD828EB60E600C603FD /* StepsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30765AD728EB60E600C603FD /* StepsData.swift */; };
 		30765ADB28EB69B200C603FD /* StepsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30765ADA28EB69B200C603FD /* StepsModel.swift */; };
+		307FE84028F807760003FD67 /* RegisterPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307FE83F28F807760003FD67 /* RegisterPage.swift */; };
 		3080688228EC8ADE00D7FC37 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3080688128EC8ADD00D7FC37 /* GoogleService-Info.plist */; };
 		3080688628EC94E800D7FC37 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3080688528EC94E800D7FC37 /* ViewRouter.swift */; };
 		3080688828ECA9AA00D7FC37 /* AuthPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3080688728ECA9AA00D7FC37 /* AuthPage.swift */; };
@@ -46,6 +47,7 @@
 		30765AD728EB60E600C603FD /* StepsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsData.swift; sourceTree = "<group>"; };
 		30765AD928EB65F300C603FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		30765ADA28EB69B200C603FD /* StepsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsModel.swift; sourceTree = "<group>"; };
+		307FE83F28F807760003FD67 /* RegisterPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterPage.swift; sourceTree = "<group>"; };
 		3080688128EC8ADD00D7FC37 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3080688528EC94E800D7FC37 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		3080688728ECA9AA00D7FC37 /* AuthPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPage.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 		3080688328EC94C400D7FC37 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				307FE83F28F807760003FD67 /* RegisterPage.swift */,
 				3080688528EC94E800D7FC37 /* ViewRouter.swift */,
 				3085FA4D28DE229500117FF7 /* MainWindow.swift */,
 				3080688728ECA9AA00D7FC37 /* AuthPage.swift */,
@@ -265,6 +268,7 @@
 				30765AC828EB3A4500C603FD /* HealthConnect.swift in Sources */,
 				3080688828ECA9AA00D7FC37 /* AuthPage.swift in Sources */,
 				30CE638928F5E08B000E973F /* ErrorCard.swift in Sources */,
+				307FE84028F807760003FD67 /* RegisterPage.swift in Sources */,
 				30765AD828EB60E600C603FD /* StepsData.swift in Sources */,
 				30FD7A85288C8E3600FAB631 /* etenApp.swift in Sources */,
 				30CE638728F5DDB1000E973F /* Fonts.swift in Sources */,

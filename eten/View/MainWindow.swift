@@ -38,7 +38,7 @@ struct MainPage: View {
                             Button(action: {
                                 do {
                                     try Auth.auth().signOut()
-                                    mainRouter.viewRouterPage = .auth
+                                    mainRouter.viewRouterPage = .login
                                     print("Signed out")
                                 } catch {
                                     print(error.localizedDescription)
