@@ -15,8 +15,6 @@ struct AuthPage: View {
     @State private var loading = false
     @ObservedObject var mainRouter: PagesRouter = PagesRouter()
     @State private var skip = true
-    @State private var lastErrorTitle : String? = nil
-    @State private var lastErrorInfo = "!ERRORMSG"
     
     
     let animation: Animation = .easeOut(duration: 0.2)
@@ -41,7 +39,7 @@ struct AuthPage: View {
                     }
                 }
                 VStack {
-                    Spacer().frame(height: skip && lastErrorTitle == nil ? 72 : 48)
+                    Spacer().frame(height: skip && mainRouter.lastErrorTitle == nil ? 72 : 48)
                     VStack {
                         Image("AuthIcon")
                             .resizable(resizingMode: .stretch)
@@ -59,18 +57,18 @@ struct AuthPage: View {
                             .foregroundColor(Color("TertiaryText"))
                     }
                     Spacer()
-                        .frame(height: lastErrorTitle == nil ? 0 : 24)
-                    if let error = lastErrorTitle {
-                        ErrorCard(title: error, description: lastErrorInfo)
+                        .frame(height: mainRouter.lastErrorTitle == nil ? 0 : 24)
+                    if let error = mainRouter.lastErrorTitle {
+                        ErrorCard(title: error, description: mainRouter.lastErrorInfo)
                             .onTapGesture {
                                 withAnimation {
-                                    lastErrorTitle = nil
-                                    lastErrorInfo = ""
+                                    mainRouter.lastErrorTitle = nil
+                                    mainRouter.lastErrorInfo = ""
                                 }
                             }
                     }
                     Spacer()
-                        .frame(height: skip && lastErrorTitle == nil ? 56 : 24)
+                        .frame(height: skip && mainRouter.lastErrorTitle == nil ? 56 : 24)
                     VStack {
                         VStack{
                             TextField("Email", text: $email)
@@ -86,8 +84,8 @@ struct AuthPage: View {
                                 .onTapGesture {
                                     withAnimation(animation) {
                                         skip = false
-                                        lastErrorTitle = nil
-                                        lastErrorInfo = ""
+                                        mainRouter.lastErrorTitle = nil
+                                        mainRouter.lastErrorInfo = ""
                                     }
                                 }
                                 .onSubmit {
@@ -104,8 +102,8 @@ struct AuthPage: View {
                                 .onTapGesture {
                                     withAnimation(animation) {
                                         skip = false
-                                        lastErrorTitle = nil
-                                        lastErrorInfo = ""
+                                        mainRouter.lastErrorTitle = nil
+                                        mainRouter.lastErrorInfo = ""
                                     }
                                 }
                                 .onSubmit {
@@ -118,11 +116,13 @@ struct AuthPage: View {
                         }
                         HStack {
                             Spacer()
-                            Button(action: {},label: { Text("Forgot password?")})
+                            Button(action: {
+                                print(mainRouter.lastErrorInfo)
+                            },label: { Text("Forgot password?")})
                                 .foregroundColor(.init(white: 0.58))
                                 .font(.caption.weight(.regular))
                         }
-                        Spacer(minLength: lastErrorTitle == nil ? 88 : 40)
+                        Spacer(minLength: mainRouter.lastErrorTitle == nil ? 88 : 40)
                         VStack {
                             Button(action: {
                                 loading = true
@@ -159,8 +159,8 @@ struct AuthPage: View {
         Auth.auth().signIn(withEmail: email, password: password) { comp, err in
             if let error = err {
                 withAnimation {
-                    lastErrorTitle = "Login Error"
-                    lastErrorInfo = error.localizedDescription
+                    mainRouter.lastErrorTitle = "Login Error"
+                    mainRouter.lastErrorInfo = error.localizedDescription
                     loading = false
                 }
                 UINotificationFeedbackGenerator().notificationOccurred(.error)
