@@ -131,7 +131,7 @@ struct AuthPage: View {
                                 if loading {
                                     ProgressView().progressViewStyle(.circular).frame(width: 310, height: 40)
                                 } else {
-                                    Text("Continue").progressViewStyle(.circular).frame(width: 310, height: 40)
+                                    Text("Continue").frame(width: 310, height: 40)
                                 }
                             }.buttonStyle(.borderedProminent)
                                 .keyboardShortcut(.defaultAction)

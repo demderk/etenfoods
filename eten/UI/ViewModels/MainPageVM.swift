@@ -19,8 +19,6 @@ class MainPageVM: ObservableObject {
         stepsData = stepsModel.stepsData
     }
     
-    
-    
     func caloriesPush(count: Int) {
         caloriesData.caloriesCount += 100
         stepsData.steps += 100

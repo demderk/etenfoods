@@ -26,9 +26,9 @@ struct MainPage: View {
                         VStack {
                             Spacer()
                                 .frame(height: 8.0)
-                            PersonalProgressCard()
                             CaloriesCard(caloriesData: caloriesVM.caloriesData)
                             StepsCard(stepsData: caloriesVM.stepsData)
+                            PersonalProgressCard()
                             Button(action: {
                                 caloriesVM.caloriesPush(count: 100)
                                 print("dasd")

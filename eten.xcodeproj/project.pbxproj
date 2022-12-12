@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		301AF60B28E74E1C00AED113 /* FontsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301AF60A28E74E1C00AED113 /* FontsExtension.swift */; };
-		30765AC828EB3A4500C603FD /* HealthConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30765AC728EB3A4500C603FD /* HealthConnect.swift */; };
 		30765ACB28EB43BC00C603FD /* CaloriesCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30765ACA28EB43BC00C603FD /* CaloriesCard.swift */; };
 		30765ACE28EB458000C603FD /* MainPageVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30765ACD28EB458000C603FD /* MainPageVM.swift */; };
 		30765AD128EB460200C603FD /* CaloriesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30765AD028EB460200C603FD /* CaloriesData.swift */; };
@@ -27,17 +26,20 @@
 		3085FA5328DE342100117FF7 /* PersonalProgressCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085FA5228DE342100117FF7 /* PersonalProgressCard.swift */; };
 		3085FA5528DF056D00117FF7 /* DayInfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085FA5428DF056D00117FF7 /* DayInfoCard.swift */; };
 		3085FA5928DF05DD00117FF7 /* CardProgressStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085FA5828DF05DD00117FF7 /* CardProgressStyle.swift */; };
+		30AB7991294218AC0099F6C3 /* EtenUserdata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AB7990294218AC0099F6C3 /* EtenUserdata.swift */; };
+		30AB799829421E380099F6C3 /* MainModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 30AB799629421E380099F6C3 /* MainModel.xcdatamodeld */; };
+		30AB79A3294226CC0099F6C3 /* UsersStore+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AB79A1294226CC0099F6C3 /* UsersStore+CoreDataClass.swift */; };
+		30AB79A4294226CC0099F6C3 /* UsersStore+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AB79A2294226CC0099F6C3 /* UsersStore+CoreDataProperties.swift */; };
+		30AB79A629423D030099F6C3 /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AB79A529423D030099F6C3 /* Diary.swift */; };
 		30CE638728F5DDB1000E973F /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CE638628F5DDB1000E973F /* Fonts.swift */; };
 		30CE638928F5E08B000E973F /* ErrorCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CE638828F5E08B000E973F /* ErrorCard.swift */; };
 		30FD7A85288C8E3600FAB631 /* etenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD7A84288C8E3600FAB631 /* etenApp.swift */; };
-		30FD7A87288C8E3600FAB631 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD7A86288C8E3600FAB631 /* ContentView.swift */; };
 		30FD7A89288C8E3A00FAB631 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30FD7A88288C8E3A00FAB631 /* Assets.xcassets */; };
 		30FD7A8C288C8E3A00FAB631 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30FD7A8B288C8E3A00FAB631 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		301AF60A28E74E1C00AED113 /* FontsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsExtension.swift; sourceTree = "<group>"; };
-		30765AC728EB3A4500C603FD /* HealthConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthConnect.swift; sourceTree = "<group>"; };
 		30765AC928EB3B3900C603FD /* eten.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = eten.entitlements; sourceTree = "<group>"; };
 		30765ACA28EB43BC00C603FD /* CaloriesCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloriesCard.swift; sourceTree = "<group>"; };
 		30765ACD28EB458000C603FD /* MainPageVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageVM.swift; sourceTree = "<group>"; };
@@ -55,11 +57,15 @@
 		3085FA5228DE342100117FF7 /* PersonalProgressCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalProgressCard.swift; sourceTree = "<group>"; };
 		3085FA5428DF056D00117FF7 /* DayInfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayInfoCard.swift; sourceTree = "<group>"; };
 		3085FA5828DF05DD00117FF7 /* CardProgressStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardProgressStyle.swift; sourceTree = "<group>"; };
+		30AB7990294218AC0099F6C3 /* EtenUserdata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtenUserdata.swift; sourceTree = "<group>"; };
+		30AB799729421E380099F6C3 /* MainModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MainModel.xcdatamodel; sourceTree = "<group>"; };
+		30AB79A1294226CC0099F6C3 /* UsersStore+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UsersStore+CoreDataClass.swift"; sourceTree = "<group>"; };
+		30AB79A2294226CC0099F6C3 /* UsersStore+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UsersStore+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		30AB79A529423D030099F6C3 /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
 		30CE638628F5DDB1000E973F /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		30CE638828F5E08B000E973F /* ErrorCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCard.swift; sourceTree = "<group>"; };
 		30FD7A81288C8E3600FAB631 /* eten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eten.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30FD7A84288C8E3600FAB631 /* etenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = etenApp.swift; sourceTree = "<group>"; };
-		30FD7A86288C8E3600FAB631 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		30FD7A88288C8E3A00FAB631 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30FD7A8B288C8E3A00FAB631 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +95,8 @@
 		30765ACF28EB45EA00C603FD /* DataModels */ = {
 			isa = PBXGroup;
 			children = (
+				30AB79A1294226CC0099F6C3 /* UsersStore+CoreDataClass.swift */,
+				30AB79A2294226CC0099F6C3 /* UsersStore+CoreDataProperties.swift */,
 				30765AD028EB460200C603FD /* CaloriesData.swift */,
 				30765AD728EB60E600C603FD /* StepsData.swift */,
 			);
@@ -127,6 +135,7 @@
 				30765AD528EB606200C603FD /* StepsCard.swift */,
 				30CE638628F5DDB1000E973F /* Fonts.swift */,
 				30CE638828F5E08B000E973F /* ErrorCard.swift */,
+				30AB79A529423D030099F6C3 /* Diary.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -158,10 +167,10 @@
 				30765AC928EB3B3900C603FD /* eten.entitlements */,
 				3085FA4F28DE30D100117FF7 /* UI */,
 				30FD7A84288C8E3600FAB631 /* etenApp.swift */,
-				30FD7A86288C8E3600FAB631 /* ContentView.swift */,
 				30FD7A88288C8E3A00FAB631 /* Assets.xcassets */,
 				30FD7A8A288C8E3A00FAB631 /* Preview Content */,
-				30765AC728EB3A4500C603FD /* HealthConnect.swift */,
+				30AB7990294218AC0099F6C3 /* EtenUserdata.swift */,
+				30AB799629421E380099F6C3 /* MainModel.xcdatamodeld */,
 			);
 			path = eten;
 			sourceTree = "<group>";
@@ -253,10 +262,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30FD7A87288C8E3600FAB631 /* ContentView.swift in Sources */,
+				30AB7991294218AC0099F6C3 /* EtenUserdata.swift in Sources */,
 				3085FA4E28DE229500117FF7 /* MainWindow.swift in Sources */,
 				30765ACE28EB458000C603FD /* MainPageVM.swift in Sources */,
+				30AB79A629423D030099F6C3 /* Diary.swift in Sources */,
 				30765ADB28EB69B200C603FD /* StepsModel.swift in Sources */,
+				30AB79A3294226CC0099F6C3 /* UsersStore+CoreDataClass.swift in Sources */,
 				3085FA5328DE342100117FF7 /* PersonalProgressCard.swift in Sources */,
 				3085FA5528DF056D00117FF7 /* DayInfoCard.swift in Sources */,
 				301AF60B28E74E1C00AED113 /* FontsExtension.swift in Sources */,
@@ -265,13 +276,14 @@
 				30765ACB28EB43BC00C603FD /* CaloriesCard.swift in Sources */,
 				30765AD128EB460200C603FD /* CaloriesData.swift in Sources */,
 				30765AD428EB4BD300C603FD /* CaloriesModel.swift in Sources */,
-				30765AC828EB3A4500C603FD /* HealthConnect.swift in Sources */,
+				30AB799829421E380099F6C3 /* MainModel.xcdatamodeld in Sources */,
 				3080688828ECA9AA00D7FC37 /* AuthPage.swift in Sources */,
 				30CE638928F5E08B000E973F /* ErrorCard.swift in Sources */,
 				307FE84028F807760003FD67 /* RegisterPage.swift in Sources */,
 				30765AD828EB60E600C603FD /* StepsData.swift in Sources */,
 				30FD7A85288C8E3600FAB631 /* etenApp.swift in Sources */,
 				30CE638728F5DDB1000E973F /* Fonts.swift in Sources */,
+				30AB79A4294226CC0099F6C3 /* UsersStore+CoreDataProperties.swift in Sources */,
 				30765AD628EB606200C603FD /* StepsCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +426,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -451,6 +464,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -518,6 +532,19 @@
 			productName = FirebaseDatabaseSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		30AB799629421E380099F6C3 /* MainModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				30AB799729421E380099F6C3 /* MainModel.xcdatamodel */,
+			);
+			currentVersion = 30AB799729421E380099F6C3 /* MainModel.xcdatamodel */;
+			path = MainModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 30FD7A79288C8E3600FAB631 /* Project object */;
 }

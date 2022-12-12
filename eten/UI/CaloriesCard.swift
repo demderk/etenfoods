@@ -25,64 +25,67 @@ struct CaloriesCard: View {
     }
     
     var body: some View {
-        VStack() {
-            Spacer()
-                .frame(height: 16.0)
-            HStack() {
-                Image(systemName: "flame.fill")
-                    .foregroundColor(Color("CaloriesColor"))
-                Text("Calories Left")
-                    .bold()
-                    .lineLimit(1)
-                    .foregroundColor(Color("CaloriesColor"))
+        NavigationLink(destination: Diary()){
+            VStack() {
                 Spacer()
-            }.font(.body)
-                .padding(.leading, 16)
-            
-            Spacer()
-                .frame(height: 8)
-            
-            HStack(alignment: .lastTextBaseline) {
+                    .frame(height: 16.0)
+                HStack() {
+                    Image(systemName: "flame.fill")
+                        .foregroundColor(Color("CaloriesColor"))
+                    Text("Calories Left")
+                        .bold()
+                        .lineLimit(1)
+                        .foregroundColor(Color("CaloriesColor"))
+                    Spacer()
+                }.font(.body)
+                    .padding(.leading, 16)
+                
                 Spacer()
-                    .frame(width: 16.0)
-                Text("\(caloriesLeft)")
-                    .font(.title)
-                Spacer()
-                    .frame(width: 4.0)
-                Text("kcal")
-                    .font(.system(size: 15))
-                    .foregroundColor(.gray)
+                    .frame(height: 8)
+                
+                HStack(alignment: .lastTextBaseline) {
+                    Spacer()
+                        .frame(width: 16.0)
+                    Text("\(caloriesLeft)")
+                        .font(.title)
+                    Spacer()
+                        .frame(width: 4.0)
+                    Text("kcal")
+                        .font(.system(size: 15))
+                        .foregroundColor(.gray)
                     
+                    Spacer()
+                }
+                
                 Spacer()
-            }
-            
-            Spacer()
-                .frame(height: 8.0)
-            
-            ProgressView(value: caloriesProgress)
-                .progressViewStyle(CardProgressStyle(color: progressBarColor, width: 312))
-                .padding(.leading, 0)
-            
-            Spacer()
-                .frame(height: 4.0)
-            
-            HStack {
+                    .frame(height: 8.0)
+                
+                ProgressView(value: caloriesProgress)
+                    .progressViewStyle(CardProgressStyle(color: progressBarColor, width: 312))
+                    .padding(.leading, 0)
+                
                 Spacer()
-                    .frame(width: 16.0)
-                Text("\(caloriesData.caloriesCount) of \(caloriesData.caloriesMax + caloriesData.caloriesBurned)")
-                    .multilineTextAlignment(.leading)
+                    .frame(height: 4.0)
+                
+                HStack {
+                    Spacer()
+                        .frame(width: 16.0)
+                    Text("\(caloriesData.caloriesCount) of \(caloriesData.caloriesMax + caloriesData.caloriesBurned)")
+                        .multilineTextAlignment(.leading)
+                    Spacer()
+                    Text("\(caloriesData.caloriesBurned) burned")
+                        .multilineTextAlignment(.trailing)
+                    Spacer()
+                        .frame(width: 16.0)
+                }.font(.system(size: 13))
+                    .foregroundColor(.gray)
+                
                 Spacer()
-                Text("\(caloriesData.caloriesBurned) burned")
-                    .multilineTextAlignment(.trailing)
-                Spacer()
-                    .frame(width: 16.0)
-            }.font(.system(size: 13))
-                .foregroundColor(.gray)
-            
-            Spacer()
-            
-        }.frame(width: 344, height: 136)
-            .background(.white)
-            .cornerRadius(8)
+                
+            }.frame(width: 344, height: 136)
+                .background(.white)
+                .cornerRadius(8)
+        }
     }
 }
+
