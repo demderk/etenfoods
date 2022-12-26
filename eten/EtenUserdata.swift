@@ -46,7 +46,7 @@ struct EtenUserdata {
     }
     
     func registerCurrentUser(email: String) {
-        var curentUser = UsersStore(context: container.viewContext)
+        let curentUser = UsersStore(context: container.viewContext)
         curentUser.email = email
         curentUser.userId = 1
         curentUser.username = "username"

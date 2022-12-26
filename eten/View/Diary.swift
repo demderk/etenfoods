@@ -10,6 +10,8 @@ import SwiftUI
 struct HistoryUnit: Identifiable {
     var id = UUID()
     
+    
+    
     var name = "Unnamed"
     var carbs: Double = 0
     var protein: Double = 0
@@ -56,32 +58,32 @@ struct DiaryListUnit: View {
             Divider()
                 .background(Color(hue: 241/360, saturation: 0.60, brightness: 0.84, opacity: 0.15))
                 .padding(.horizontal,8)
-                ForEach(group.content) { item in
-                    HStack{
-                        VStack(alignment: .leading) {
-                            Text(item.name)
-                            Spacer().frame(height: 3)
-                            HStack(alignment: .center) {
-                                Text("Carbs \(String(format: "%.1f", item.carbs))")
-                                Divider().frame(height: 8).overlay(Color(UIColor.systemGray))
-                                Text("Protein \(String(format: "%.1f", item.protein))")
-                                Divider().frame(height: 8).overlay(Color(UIColor.systemGray))
-                                Text("Fats \(String(format: "%.1f", item.fats))")
-                            }.font(.tertiary).foregroundColor(Color("TertiaryText"))
-                        }
-                        Spacer()
-                        VStack(alignment: .center) {
-                            Text("\(item.calories)")
-                            Text("CAL").font(.trueCaption).foregroundColor(Color("TertiaryText"))
-                        }
-                        Divider().frame(height: 8)
-                        VStack(alignment: .center) {
-                            Text("\(item.portion)")
-                            Text("GRAM").font(.trueCaption).foregroundColor(Color("TertiaryText"))
-                        }
-                    }.padding(.top, 3)
-                    Spacer().frame(height: 5)
-                }.padding(.horizontal)
+            ForEach(group.content) { item in
+                HStack{
+                    VStack(alignment: .leading) {
+                        Text(item.name)
+                        Spacer().frame(height: 3)
+                        HStack(alignment: .center) {
+                            Text("Carbs \(String(format: "%.1f", item.carbs))")
+                            Divider().frame(height: 8).overlay(Color(UIColor.systemGray))
+                            Text("Protein \(String(format: "%.1f", item.protein))")
+                            Divider().frame(height: 8).overlay(Color(UIColor.systemGray))
+                            Text("Fats \(String(format: "%.1f", item.fats))")
+                        }.font(.tertiary).foregroundColor(Color("TertiaryText"))
+                    }
+                    Spacer()
+                    VStack(alignment: .center) {
+                        Text("\(item.calories)")
+                        Text("CAL").font(.trueCaption).foregroundColor(Color("TertiaryText"))
+                    }
+                    Divider().frame(height: 8)
+                    VStack(alignment: .center) {
+                        Text("\(item.portion)")
+                        Text("GRAM").font(.trueCaption).foregroundColor(Color("TertiaryText"))
+                    }
+                }.padding(.top, 3)
+                Spacer().frame(height: 5)
+            }.padding(.horizontal)
         }
     }
 }
@@ -126,14 +128,12 @@ struct Diary: View {
                 }
                 Spacer().frame(height: 8)
             }
-            Button(action: {
-                
-            }) {
+            NavigationLink(destination: FoodCollection()){
                 Text("Add").fontWeight(.medium).progressViewStyle(.circular).frame(width: 320, height: 40)
             }.buttonStyle(.borderedProminent)
+            
             Spacer().frame(height: 16)
         }.navigationTitle("Diary")
-            .navigationBarBackButtonHidden(true)
     }
 }
 

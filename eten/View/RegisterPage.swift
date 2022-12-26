@@ -183,7 +183,7 @@ struct RegisterPage: View {
                 withAnimation{
                     lastErrorTitle = "Registration Error"
                     lastErrorInfo = error.localizedDescription
-                    print(lastErrorTitle)
+                    print(lastErrorTitle ?? "Something went wrong")
                     loading = false
                 
                 }

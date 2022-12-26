@@ -85,7 +85,7 @@ struct CaloriesCard: View {
             }.frame(width: 344, height: 136)
                 .background(.white)
                 .cornerRadius(8)
-        }
+        }.buttonStyle(.plain)
     }
 }
 
