@@ -11,11 +11,11 @@ struct FoodCollection: View {
     var foodCollection: [FoodModel] = []
     
     init() {
-    #if DEBUG
+#if DEBUG
         for _ in 0...20 {
             foodCollection.append(FoodModel())
         }
-    #endif
+#endif
     }
     
     
@@ -24,7 +24,7 @@ struct FoodCollection: View {
     
     @State var autoHide:CGFloat = 0.0
     @State var scrollSpyLastOffset:CGFloat = 0.0
-
+    @State var searchIslandOpacity = 1.0
     
     var body: some View {
         
@@ -32,28 +32,28 @@ struct FoodCollection: View {
             Color.init(UIColor.secondarySystemBackground).ignoresSafeArea(.all)
             ScrollView{
                 GeometryReader() { geometry -> Color in
-                    
+                    let foodBlockSize = 32
+                    let bottomAnimationSkip = CGFloat(-foodBlockSize * foodCollection.count)
                     let minY = geometry.frame(in: .named("List")).minY
-                    
+
                     DispatchQueue.main.async {
-                        if (minY < 116.0 && minY > -697) {
-                            //FIXME: CALCULATE SIZE OF BLOCKS
+                        if (minY < 116.0 && minY > bottomAnimationSkip) {
                             if (scrollSpyLastOffset == 0.0) {
                                 scrollSpyLastOffset = minY
                             }
                             if (scrollSpyLastOffset > minY) {
-                                if searchIslandOffset < 144 {
-                                    searchIslandOffset += min(144,abs(scrollSpyLastOffset - minY))
-                                    
+                                if searchIslandOffset < 144 + 54 {
+                                    searchIslandOffset += min(144 + 54,abs(scrollSpyLastOffset - minY))
+                                    searchIslandOpacity = 1 - searchIslandOffset / (144 + 54) * 2
                                 }
                             }
                             else {
                                 if searchIslandOffset > 0 {
                                     searchIslandOffset = max(0,searchIslandOffset - abs(scrollSpyLastOffset - minY))
+                                    searchIslandOpacity = 1 - searchIslandOffset / (144 + 54) * 2
                                 }
                             }
                         }
-                        print("\(geometry.size.width) \(geometry.size.height) \(minY)")
                         scrollSpyLastOffset = minY
                     }
                     return Color.clear
@@ -89,7 +89,7 @@ struct FoodCollection: View {
                 Spacer()
                 
                 ZStack {
-
+                    
                     VStack{
                         HStack {
                             NavigationLink(destination: { Text("NYI") }) {
@@ -99,7 +99,7 @@ struct FoodCollection: View {
                                     Spacer().frame(height: 4)
                                     Text("Create Meal").font(.caption)
                                 }.padding(.horizontal,16)
-                                .frame(height: 56, alignment: .center)
+                                    .frame(height: 56, alignment: .center)
                                     .background(.white)
                                     .cornerRadius(8)
                             }.buttonStyle(.plain)
@@ -111,7 +111,7 @@ struct FoodCollection: View {
                                     Spacer().frame(height: 4)
                                     Text("Scan Barcode").font(.caption)
                                 }.padding(.horizontal,16)
-                                .frame(height: 56, alignment: .center)
+                                    .frame(height: 56, alignment: .center)
                                     .background(.white)
                                     .cornerRadius(8)
                             }.buttonStyle(.plain)
@@ -123,7 +123,7 @@ struct FoodCollection: View {
                                     Spacer().frame(height: 4)
                                     Text("Quick Add").font(.caption)
                                 }.padding(.horizontal,16)
-                                .frame(height: 56, alignment: .center)
+                                    .frame(height: 56, alignment: .center)
                                     .background(.white)
                                     .cornerRadius(8)
                             }.buttonStyle(.plain)
@@ -140,11 +140,13 @@ struct FoodCollection: View {
                             .cornerRadius(16)
                             .padding(.horizontal, 8)
                         Spacer().frame(height: 54)
-                    }.frame(maxWidth: .infinity, maxHeight: 144 + 54)
+                    }.opacity(searchIslandOpacity)
+                    .frame(maxWidth: .infinity, maxHeight: 144 + 54)
                         .background(.ultraThinMaterial)
                         .cornerRadius(16, corners: [.topLeft,.topRight])
                         .padding(.bottom,-searchIslandOffset - 54)
                         .animation(.easeOut(duration: 0.250))
+
                     
                     if (searchIslandOffset > 40) {
                         Rectangle()
@@ -156,6 +158,7 @@ struct FoodCollection: View {
                             .animation(.easeOut(duration: 0.250))
                             .onTapGesture {
                                 self.searchIslandOffset = 0
+                                self.searchIslandOpacity = 1
                             }
                     }
                 }

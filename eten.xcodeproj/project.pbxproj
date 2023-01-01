@@ -22,6 +22,7 @@
 		3080688B28ECC08C00D7FC37 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3080688A28ECC08C00D7FC37 /* FirebaseAnalyticsSwift */; };
 		3080688D28ECC08C00D7FC37 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3080688C28ECC08C00D7FC37 /* FirebaseAuth */; };
 		3080688F28ECC08C00D7FC37 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3080688E28ECC08C00D7FC37 /* FirebaseDatabaseSwift */; };
+		308188222961BA36002FB513 /* FoodSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308188212961BA35002FB513 /* FoodSearch.swift */; };
 		3085FA4E28DE229500117FF7 /* MainWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085FA4D28DE229500117FF7 /* MainWindow.swift */; };
 		3085FA5328DE342100117FF7 /* PersonalProgressCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085FA5228DE342100117FF7 /* PersonalProgressCard.swift */; };
 		3085FA5528DF056D00117FF7 /* DayInfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085FA5428DF056D00117FF7 /* DayInfoCard.swift */; };
@@ -56,6 +57,7 @@
 		3080688128EC8ADD00D7FC37 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3080688528EC94E800D7FC37 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		3080688728ECA9AA00D7FC37 /* AuthPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPage.swift; sourceTree = "<group>"; };
+		308188212961BA35002FB513 /* FoodSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSearch.swift; sourceTree = "<group>"; };
 		3085FA4D28DE229500117FF7 /* MainWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindow.swift; sourceTree = "<group>"; };
 		3085FA5228DE342100117FF7 /* PersonalProgressCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalProgressCard.swift; sourceTree = "<group>"; };
 		3085FA5428DF056D00117FF7 /* DayInfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayInfoCard.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				3085FA4D28DE229500117FF7 /* MainWindow.swift */,
 				3080688728ECA9AA00D7FC37 /* AuthPage.swift */,
 				30CD544B29575AAD004DB6F1 /* FoodCollection.swift */,
+				308188212961BA35002FB513 /* FoodSearch.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				301AF60B28E74E1C00AED113 /* FontsExtension.swift in Sources */,
 				3080688628EC94E800D7FC37 /* ViewRouter.swift in Sources */,
 				3085FA5928DF05DD00117FF7 /* CardProgressStyle.swift in Sources */,
+				308188222961BA36002FB513 /* FoodSearch.swift in Sources */,
 				30765ACB28EB43BC00C603FD /* CaloriesCard.swift in Sources */,
 				30765AD128EB460200C603FD /* CaloriesData.swift in Sources */,
 				30765AD428EB4BD300C603FD /* CaloriesModel.swift in Sources */,
