@@ -89,6 +89,19 @@ struct DiaryListUnit: View {
 }
 
 struct Diary: View {
+    @State var searchText: String = ""
+    @State var searchIslandOffset: Double = 0
+    
+    @State var autoHide:CGFloat = 0.0
+    @State var scrollSpyLastOffset:CGFloat = 0.0
+    @State var searchIslandOpacity = 1.0
+    
+    var isSearchActivated:Bool {
+        get {
+            return searchText != ""
+        }
+    }
+    
     var foodItems: [HistoryUnit] = []
     var firstFoodGroup: [HistoryGroup] = []
     
@@ -110,30 +123,60 @@ struct Diary: View {
     }
     
     var body: some View {
-        VStack {
-            ScrollView {
-                HStack(alignment: .center) {
-                    Image(systemName: "calendar")
-                    Spacer().frame(width: 4)
-                    Text("June 22").font(.system(size: 20))
-                    Spacer()
+        ZStack{
+            if (!isSearchActivated) {
+                VStack {
+                    ScrollView {
+//                        GeometryReader() { geometry -> Color in
+//                            let foodBlockSize = 30
+//                            let bottomAnimationSkip = CGFloat(-foodBlockSize * foodItems.count + 116)
+//                            let minY = geometry.frame(in: .named("List")).minY
+//                            
+//                            DispatchQueue.main.async {
+//                                if (minY < 116.0 && minY > bottomAnimationSkip) {
+//                                    if (scrollSpyLastOffset == 0.0) {
+//                                        scrollSpyLastOffset = minY
+//                                    }
+//                                    if (scrollSpyLastOffset > minY) {
+//                                        if searchIslandOffset < 144 + 54 {
+//                                            searchIslandOffset += min(144 + 54,abs(scrollSpyLastOffset - minY))
+//                                            searchIslandOpacity = 1 - searchIslandOffset / (144 + 54) * 2
+//                                        }
+//                                    }
+//                                    else {
+//                                        if searchIslandOffset > 0 {
+//                                            searchIslandOffset = max(0,searchIslandOffset - abs(scrollSpyLastOffset - minY))
+//                                            searchIslandOpacity = 1 - searchIslandOffset / (144 + 54) * 2
+//                                        }
+//                                    }
+//                                }
+//                                scrollSpyLastOffset = minY
+//                            }
+//                            return Color.clear
+//                        }
+                        HStack(alignment: .center) {
+                            Image(systemName: "calendar")
+                            Spacer().frame(width: 4)
+                            Text("June 22").font(.system(size: 20))
+                            Spacer()
+                        }
+                        .font(.body)
+                        .foregroundColor(Color(UIColor.systemBlue))
+                        .padding(.horizontal)
+                        .padding(.top, -7)
+                        Spacer().frame(height: 10)
+                        ForEach(firstFoodGroup) { item in
+                            DiaryListUnit(group: item)
+                        }
+                        Spacer().frame(height: 8)
+                    }
                 }
-                .font(.body)
-                .foregroundColor(Color(UIColor.systemBlue))
-                .padding(.horizontal)
-                .padding(.top, -7)
-                Spacer().frame(height: 10)
-                ForEach(firstFoodGroup) { item in
-                    DiaryListUnit(group: item)
-                }
-                Spacer().frame(height: 8)
             }
-            NavigationLink(destination: FoodCollection()){
-                Text("Add").fontWeight(.medium).progressViewStyle(.circular).frame(width: 320, height: 40)
-            }.buttonStyle(.borderedProminent)
-            
-            Spacer().frame(height: 16)
-        }.navigationTitle("Diary")
+            else {
+                Text("You are searching \(searchText)")
+            }
+            FoodSearchView(searchIslandOpacity: $searchIslandOpacity, searchText: $searchText, searchIslandOffset: $searchIslandOffset)
+        }.navigationBarTitleDisplayMode(isSearchActivated ? .inline : .automatic).navigationTitle(isSearchActivated ? "Search" : "Diary")
     }
 }
 

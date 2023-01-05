@@ -32,8 +32,8 @@ struct FoodCollection: View {
             Color.init(UIColor.secondarySystemBackground).ignoresSafeArea(.all)
             ScrollView{
                 GeometryReader() { geometry -> Color in
-                    let foodBlockSize = 32
-                    let bottomAnimationSkip = CGFloat(-foodBlockSize * foodCollection.count)
+                    let foodBlockSize = 30
+                    let bottomAnimationSkip = CGFloat(-foodBlockSize * foodCollection.count + 116)
                     let minY = geometry.frame(in: .named("List")).minY
 
                     DispatchQueue.main.async {
@@ -83,87 +83,11 @@ struct FoodCollection: View {
                             .cornerRadius(8)
                             .padding(.horizontal, 16)
                     }.coordinateSpace(name: "List")
+                    Spacer().frame(height: 16)
                 }
             }
-            VStack {
-                Spacer()
-                
-                ZStack {
-                    
-                    VStack{
-                        HStack {
-                            NavigationLink(destination: { Text("NYI") }) {
-                                //FIXME: CHANGE BUTTON PATH HERE
-                                VStack{
-                                    Image(systemName: "plus")
-                                    Spacer().frame(height: 4)
-                                    Text("Create Meal").font(.caption)
-                                }.padding(.horizontal,16)
-                                    .frame(height: 56, alignment: .center)
-                                    .background(.white)
-                                    .cornerRadius(8)
-                            }.buttonStyle(.plain)
-                            Spacer().frame(width: 16)
-                            NavigationLink(destination: { Text("NYI") }) {
-                                //FIXME: CHANGE BUTTON PATH HERE
-                                VStack{
-                                    Image(systemName: "barcode.viewfinder")
-                                    Spacer().frame(height: 4)
-                                    Text("Scan Barcode").font(.caption)
-                                }.padding(.horizontal,16)
-                                    .frame(height: 56, alignment: .center)
-                                    .background(.white)
-                                    .cornerRadius(8)
-                            }.buttonStyle(.plain)
-                            Spacer().frame(width: 16)
-                            NavigationLink(destination: { Text("NYI") }) {
-                                //FIXME: CHANGE BUTTON PATH HERE
-                                VStack{
-                                    Image(systemName: "bolt.fill")
-                                    Spacer().frame(height: 4)
-                                    Text("Quick Add").font(.caption)
-                                }.padding(.horizontal,16)
-                                    .frame(height: 56, alignment: .center)
-                                    .background(.white)
-                                    .cornerRadius(8)
-                            }.buttonStyle(.plain)
-                        }
-                        Spacer().frame(height: 16)
-                        HStack(alignment: .center) {
-                            Image(systemName: "magnifyingglass")
-                                .font(.body.weight(.semibold))
-                                .foregroundColor(Color(hue: 240/360, saturation: 0.04, brightness: 0.58,opacity: 0.8))
-                            TextField("Search", text: $searchText)
-                        }.frame(height: 44)
-                            .padding(.horizontal,8)
-                            .background(.white)
-                            .cornerRadius(16)
-                            .padding(.horizontal, 8)
-                        Spacer().frame(height: 54)
-                    }.opacity(searchIslandOpacity)
-                    .frame(maxWidth: .infinity, maxHeight: 144 + 54)
-                        .background(.ultraThinMaterial)
-                        .cornerRadius(16, corners: [.topLeft,.topRight])
-                        .padding(.bottom,-searchIslandOffset - 54)
-                        .animation(.easeOut(duration: 0.250))
-
-                    
-                    if (searchIslandOffset > 40) {
-                        Rectangle()
-                            .fill(Color.clear)
-                            .frame(maxWidth: .infinity, maxHeight: 144 + 54)
-                            .contentShape(Rectangle())
-                            .cornerRadius(16, corners: [.topLeft,.topRight])
-                            .padding(.bottom,-searchIslandOffset - 54)
-                            .animation(.easeOut(duration: 0.250))
-                            .onTapGesture {
-                                self.searchIslandOffset = 0
-                                self.searchIslandOpacity = 1
-                            }
-                    }
-                }
-                // See UI/Extensions/cornerRadiusCustom
-            }
+            
+            FoodSearchView(searchIslandOpacity: $searchIslandOpacity, searchText: $searchText, searchIslandOffset: $searchIslandOffset)
         }.navigationTitle("Food Collection")
     }
 }

@@ -18,7 +18,6 @@ struct AuthPage: View {
     @State private var lastErrorTitle : String? = nil
     @State private var lastErrorInfo = "!ERRORMSG"
     
-    
     let animation: Animation = .easeOut(duration: 0.2)
     
     private enum SelectedField {
